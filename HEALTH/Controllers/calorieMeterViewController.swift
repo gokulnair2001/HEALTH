@@ -12,10 +12,13 @@ class calorieMeterViewController: UIViewController, didUpdateVessel {
         selectedVessel.image  = imageofVessel
         containerName.text = vesselName
         containerQuantity.text = "Quantity: \(vesselQuantity) gm"
+        selVesselQuantity = vesselQuantity
     }
     
     
     let foodDetector = foodClassifier()
+    
+    var selVesselQuantity:Int = 20
     
     @IBOutlet weak var selectedVessel: UIImageView!
     @IBOutlet weak var bgView: UIView!
@@ -24,16 +27,22 @@ class calorieMeterViewController: UIViewController, didUpdateVessel {
     @IBOutlet weak var imageData: UIImageView!
     @IBOutlet weak var infoButton: UIButton!
     
+    @IBOutlet weak var perCalLbl: UILabel!
+    @IBOutlet weak var totalCalLbl: UILabel!
+    @IBOutlet weak var foodInfo: UITextView!
+    @IBOutlet weak var itemName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bgView.layer.cornerRadius = 10
+        infoButton.layer.cornerRadius = 5
         // Do any additional setup after loading the view.
     }
     
     @IBAction func moreInfoBtn(_ sender: Any) {
     }
     @IBAction func selectImage(_ sender: Any) {
+        
         setupImageSelection()
     }
     
@@ -64,10 +73,16 @@ extension calorieMeterViewController {
                 let res = result.classLabel
                 
                 if res == "Apple"{
-                   
+                    itemName.text = "Apple"
+                    perCalLbl.text = "1"
+                    totalCalLbl.text = "\(selVesselQuantity)"
+                    foodInfo.text = "An apple is an edible fruit produced by an apple tree (Malus domestica). Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe and were brought to North America by European colonists. Apples have religious and mythological significance in many cultures, including Norse, Greek, and European Christian tradition."
                 }
                 else if res == "Grapes"{
-                 
+                    itemName.text = "Grapes"
+                    perCalLbl.text = "2"
+                    totalCalLbl.text = "\(selVesselQuantity*2)"
+                    foodInfo.text = "A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. Grapes can be eaten fresh as table grapes or they can be used for making wine, jam, grape juice, jelly, grape seed extract, raisins, vinegar, and grape seed oil. Grapes are a non-climacteric type of fruit, generally occurring in clusters."
                 }
                 else{
                     
