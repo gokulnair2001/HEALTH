@@ -22,7 +22,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usual Bowl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHU-ak-0uS">
-                                        <rect key="frame" x="8" y="22" width="219" height="28"/>
+                                        <rect key="frame" x="8" y="19" width="219" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
@@ -33,7 +33,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity: 20 gm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV3-Mw-vB5">
-                                        <rect key="frame" x="8" y="65" width="250" height="28"/>
+                                        <rect key="frame" x="8" y="60" width="250" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                         <color key="textColor" systemColor="systemIndigoColor"/>
@@ -50,7 +50,7 @@
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaK-vC-zJq">
-                                <rect key="frame" x="20" y="305" width="166" height="48"/>
+                                <rect key="frame" x="15" y="325" width="166" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -143,9 +143,13 @@
                         <outlet property="bgView" destination="dxF-Bv-Dhx" id="DfN-Fx-r8n"/>
                         <outlet property="containerName" destination="NHU-ak-0uS" id="Cbv-VM-gmw"/>
                         <outlet property="containerQuantity" destination="SV3-Mw-vB5" id="bb7-tN-b4n"/>
+                        <outlet property="foodInfo" destination="buO-n2-paJ" id="Sgy-bt-7WR"/>
                         <outlet property="imageData" destination="8em-PX-lwA" id="e3m-ue-7YO"/>
                         <outlet property="infoButton" destination="DZ1-JN-huM" id="om3-W3-232"/>
+                        <outlet property="itemName" destination="VaK-vC-zJq" id="Reh-1v-C5j"/>
+                        <outlet property="perCalLbl" destination="muW-AC-BFf" id="VwG-Gg-NLW"/>
                         <outlet property="selectedVessel" destination="ND0-Hh-AJG" id="FpW-Ed-MlV"/>
+                        <outlet property="totalCalLbl" destination="W7P-gp-HGP" id="4M5-HF-KAf"/>
                         <segue destination="0e9-lg-o0p" kind="presentation" identifier="show" id="YZM-7N-DE9"/>
                     </connections>
                 </viewController>
