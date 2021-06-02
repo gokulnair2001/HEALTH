@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol didUpdateVessel {
+    func updateVessel(vesselQuantity: Int, imageofVessel: UIImage, vesselName: String)
+}
+
 class vesselViewController: UIViewController {
 
     @IBOutlet weak var bgView: UIView!
@@ -17,6 +21,8 @@ class vesselViewController: UIViewController {
     
     var vesselImage:[UIImage] = [#imageLiteral(resourceName: "v1"),#imageLiteral(resourceName: "v2"),#imageLiteral(resourceName: "v3")]
     var vesselName:[String] = ["Round Bowl","Usual Bowl","Office Tiffin"]
+    
+    var vesselSelectionDelegate: didUpdateVessel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +56,10 @@ extension vesselViewController : UICollectionViewDelegate, UICollectionViewDataS
     }
  
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.dismiss(animated: true, completion: nil)
+        let vesselNo = indexPath.row
+        
+        vesselSelectionDelegate?.updateVessel(vesselQuantity: (vesselNo+1)*10, imageofVessel: vesselImage[vesselNo], vesselName: vesselName[vesselNo])
         self.dismiss(animated: true, completion: nil)
     }
     

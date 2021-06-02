@@ -17,6 +17,7 @@
 		55329BAD2667B35800A6CB44 /* calorieMeterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55329BAC2667B35800A6CB44 /* calorieMeterViewController.swift */; };
 		55329BAF2667B37300A6CB44 /* vesselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55329BAE2667B37300A6CB44 /* vesselViewController.swift */; };
 		55329BB12667B95F00A6CB44 /* vesselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55329BB02667B95F00A6CB44 /* vesselCollectionViewCell.swift */; };
+		55329BB326681BFD00A6CB44 /* foodClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55329BB226681BFD00A6CB44 /* foodClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		55329BAC2667B35800A6CB44 /* calorieMeterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calorieMeterViewController.swift; sourceTree = "<group>"; };
 		55329BAE2667B37300A6CB44 /* vesselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vesselViewController.swift; sourceTree = "<group>"; };
 		55329BB02667B95F00A6CB44 /* vesselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vesselCollectionViewCell.swift; sourceTree = "<group>"; };
+		55329BB226681BFD00A6CB44 /* foodClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = foodClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,17 +68,50 @@
 			children = (
 				55329B952667A5C300A6CB44 /* AppDelegate.swift */,
 				55329B972667A5C300A6CB44 /* SceneDelegate.swift */,
-				55329B992667A5C300A6CB44 /* ViewController.swift */,
-				55329B9B2667A5C300A6CB44 /* Main.storyboard */,
-				55329BB02667B95F00A6CB44 /* vesselCollectionViewCell.swift */,
-				55329BAE2667B37300A6CB44 /* vesselViewController.swift */,
-				55329BAC2667B35800A6CB44 /* calorieMeterViewController.swift */,
-				55329BA12667A5C400A6CB44 /* Assets.xcassets */,
-				55329BA32667A5C400A6CB44 /* LaunchScreen.storyboard */,
+				55329BB726681C1E00A6CB44 /* ML Model */,
+				55329BB626681C1900A6CB44 /* Model */,
+				55329BB526681C0D00A6CB44 /* View */,
+				55329BB426681C0300A6CB44 /* Controllers */,
 				55329BA62667A5C400A6CB44 /* Info.plist */,
 				55329B9E2667A5C300A6CB44 /* HEALTH.xcdatamodeld */,
 			);
 			path = HEALTH;
+			sourceTree = "<group>";
+		};
+		55329BB426681C0300A6CB44 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				55329B992667A5C300A6CB44 /* ViewController.swift */,
+				55329BB02667B95F00A6CB44 /* vesselCollectionViewCell.swift */,
+				55329BAE2667B37300A6CB44 /* vesselViewController.swift */,
+				55329BAC2667B35800A6CB44 /* calorieMeterViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		55329BB526681C0D00A6CB44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55329B9B2667A5C300A6CB44 /* Main.storyboard */,
+				55329BA12667A5C400A6CB44 /* Assets.xcassets */,
+				55329BA32667A5C400A6CB44 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55329BB626681C1900A6CB44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55329BB726681C1E00A6CB44 /* ML Model */ = {
+			isa = PBXGroup;
+			children = (
+				55329BB226681BFD00A6CB44 /* foodClassifier.mlmodel */,
+			);
+			path = "ML Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +187,7 @@
 				55329B9A2667A5C300A6CB44 /* ViewController.swift in Sources */,
 				55329BAD2667B35800A6CB44 /* calorieMeterViewController.swift in Sources */,
 				55329BA02667A5C300A6CB44 /* HEALTH.xcdatamodeld in Sources */,
+				55329BB326681BFD00A6CB44 /* foodClassifier.mlmodel in Sources */,
 				55329BB12667B95F00A6CB44 /* vesselCollectionViewCell.swift in Sources */,
 				55329B962667A5C300A6CB44 /* AppDelegate.swift in Sources */,
 				55329BAF2667B37300A6CB44 /* vesselViewController.swift in Sources */,
