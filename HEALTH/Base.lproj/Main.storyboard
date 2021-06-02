@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cfi-a8-8lT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calorie Meter-->
+        <scene sceneID="muf-sd-xLq">
+            <objects>
+                <viewController id="5OX-hz-mai" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fh4-Yr-D7u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jXi-by-M3u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Calorie Meter" id="4AT-zD-eiI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hh1-xc-xZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="923" y="832"/>
+        </scene>
+        <!--Activity-->
+        <scene sceneID="IvL-gT-jkI">
+            <objects>
+                <viewController id="uZr-Rb-aUd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p4R-Kf-eGv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PkR-f0-9Gl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Activity" image="flame" catalog="system" id="sOy-uJ-ySH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qAa-mh-RV6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3423" y="832"/>
+        </scene>
+        <!--Diet-->
+        <scene sceneID="be3-6j-U59">
+            <objects>
+                <viewController id="4qi-w3-fb8" customClass="ViewController" customModule="HEALTH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IlO-4L-lJb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TdA-5B-K5p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Diet" image="drop" catalog="system" id="hme-LB-euY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p4Z-VI-TK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1668" y="833"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DAd-Ys-LQW">
+            <objects>
+                <tabBarController id="cfi-a8-8lT" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dqR-qR-Hwm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemGreenColor"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemGreenColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4qi-w3-fb8" kind="relationship" relationship="viewControllers" id="cz4-s0-3AA"/>
+                        <segue destination="76m-3h-LXH" kind="relationship" relationship="viewControllers" id="64P-wS-WWf"/>
+                        <segue destination="uZr-Rb-aUd" kind="relationship" relationship="viewControllers" id="SC5-j4-ETa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vap-1m-uv5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="27"/>
+        </scene>
+        <!--Meter-->
+        <scene sceneID="ZV4-2S-g5v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="76m-3h-LXH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Meter" image="gauge" catalog="system" id="St7-Ud-I8e"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="HEr-st-zjR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5OX-hz-mai" kind="relationship" relationship="rootViewController" id="dnv-Nb-2J7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ciS-PQ-ArD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13" y="832"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="drop" catalog="system" width="101" height="128"/>
+        <image name="flame" catalog="system" width="108" height="128"/>
+        <image name="gauge" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
