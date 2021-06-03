@@ -38,8 +38,7 @@ class calorieMeterViewController: UIViewController, didUpdateVessel {
         super.viewDidLoad()
         bgView.layer.cornerRadius = 10
         infoButton.layer.cornerRadius = 5
-
-       
+        imageData.layer.cornerRadius = 20
     }
     
     @IBAction func moreInfoBtn(_ sender: Any) {
@@ -108,7 +107,7 @@ extension calorieMeterViewController:  UIImagePickerControllerDelegate, UINaviga
         picker.dismiss(animated: true, completion: nil)
         let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         self.imageData.image = image
-        Loaf.LoafWheel(message: "Foos is Being Processed!", loafWidth: 250, loafHeight: 100, cornerRadius: 17, bgColor1: .systemOrange, bgColor2: .systemYellow, fontStyle: "Avenir Medium", fontSize: 17, fontColor: .black, duration: 5, wheelStyle: .large, blurEffect: .light, loafWheelView: view)
+        Loaf.LoafWheel(message: "Food is Being Processed!", loafWidth: 250, loafHeight: 100, cornerRadius: 17, bgColor1: .systemOrange, bgColor2: .systemYellow, fontStyle: "Avenir Medium", fontSize: 17, fontColor: .black, duration: 5, wheelStyle: .large, blurEffect: .light, loafWheelView: view)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
             self.imageClassifier()
         })
