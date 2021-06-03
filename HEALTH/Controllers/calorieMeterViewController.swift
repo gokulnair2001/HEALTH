@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Loafjet
 
 class calorieMeterViewController: UIViewController, didUpdateVessel {
     func updateVessel(vesselQuantity: Int, imageofVessel: UIImage, vesselName: String) {
@@ -17,6 +18,7 @@ class calorieMeterViewController: UIViewController, didUpdateVessel {
     
     
     let foodDetector = foodClassifier()
+   // let loadingIndicator = UIActivityIndicatorView()
     
     var selVesselQuantity:Int = 20
     
@@ -36,10 +38,14 @@ class calorieMeterViewController: UIViewController, didUpdateVessel {
         super.viewDidLoad()
         bgView.layer.cornerRadius = 10
         infoButton.layer.cornerRadius = 5
-        // Do any additional setup after loading the view.
+
+       
     }
     
     @IBAction func moreInfoBtn(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "infoViewss") as! infoChartViewController
+        vc.modalPresentationStyle = .formSheet
+        navigationController?.present(vc, animated: true, completion: nil)
     }
     @IBAction func selectImage(_ sender: Any) {
         
@@ -102,9 +108,10 @@ extension calorieMeterViewController:  UIImagePickerControllerDelegate, UINaviga
         picker.dismiss(animated: true, completion: nil)
         let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         self.imageData.image = image
-        DispatchQueue.main.async {
+        Loaf.LoafWheel(message: "Foos is Being Processed!", loafWidth: 250, loafHeight: 100, cornerRadius: 17, bgColor1: .systemOrange, bgColor2: .systemYellow, fontStyle: "Avenir Medium", fontSize: 17, fontColor: .black, duration: 5, wheelStyle: .large, blurEffect: .light, loafWheelView: view)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
             self.imageClassifier()
-        }
+        })
     }
     
     func setupImageSelection(){
