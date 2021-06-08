@@ -101,7 +101,7 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Info about food" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="buO-n2-paJ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Info about food" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buO-n2-paJ">
                                 <rect key="frame" x="20" y="476" width="386" height="179"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
