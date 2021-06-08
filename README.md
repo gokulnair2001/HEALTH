@@ -13,7 +13,7 @@
 1. UIKit
 2. CoreML
 3. AVKit
-4. (Loafjet)[https://github.com/Loafjet/Loafjet]
+4. [Loafjet](https://github.com/Loafjet/Loafjet)
 
 ## License 
 * Do read the [License](https://github.com/gokulnair2001/HEALTH/blob/master/LICENSE) to know more about HEALTH.
