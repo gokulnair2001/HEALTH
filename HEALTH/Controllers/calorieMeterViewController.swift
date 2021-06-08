@@ -9,11 +9,18 @@ import UIKit
 import Loafjet
 
 class calorieMeterViewController: UIViewController, didUpdateVessel {
+   
     func updateVessel(vesselQuantity: Int, imageofVessel: UIImage, vesselName: String) {
         selectedVessel.image  = imageofVessel
         containerName.text = vesselName
         containerQuantity.text = "Quantity: \(vesselQuantity) gm"
         selVesselQuantity = vesselQuantity
+        
+        perCalLbl.text = "00.0"
+        totalCalLbl.text = "00.0"
+        foodInfo.text = "Info about food"
+        itemName.text = "Item"
+        imageData.image = #imageLiteral(resourceName: "sample")
     }
     
     
@@ -34,17 +41,27 @@ class calorieMeterViewController: UIViewController, didUpdateVessel {
     @IBOutlet weak var foodInfo: UITextView!
     @IBOutlet weak var itemName: UILabel!
     
+    static var itemIdentified = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bgView.layer.cornerRadius = 10
         infoButton.layer.cornerRadius = 5
         imageData.layer.cornerRadius = 20
+        imageData.image = UIImage(named: "sample")
     }
     
     @IBAction func moreInfoBtn(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(identifier: "infoViewss") as! infoChartViewController
-        vc.modalPresentationStyle = .formSheet
-        navigationController?.present(vc, animated: true, completion: nil)
+        if imageData.image == UIImage(named: "sample") {
+            let alert = UIAlertController(title: "Food Missing 🥗", message: "Add an Item to get info about it.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }else{
+            calorieMeterViewController.itemIdentified = itemName.text!
+            let vc = storyboard?.instantiateViewController(identifier: "infoViewss") as! infoChartViewController
+            vc.modalPresentationStyle = .formSheet
+            navigationController?.present(vc, animated: true, completion: nil)
+        }
     }
     @IBAction func selectImage(_ sender: Any) {
         

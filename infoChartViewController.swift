@@ -21,19 +21,26 @@ class infoChartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bgView.layer.cornerRadius = 15
-//        bgView.layer.borderWidth = 3
-//        bgView.layer.borderColor = UIColor.black.cgColor
         sliderUpdate()
     }
     
     func sliderUpdate() {
         vitaminSlider.progress = 0
+        
+        if calorieMeterViewController.itemIdentified == "Apple" {
+            arrayOf(selecItemArray: [2,9,2,4,1,6])
+        }else {
+            arrayOf(selecItemArray: [2,7,3,5,6,6])
+        }
+    }
+    
+    func arrayOf(selecItemArray: [Float]) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.vitaminSlider.setProgress(self.Content[0]/10, animated: true)
-            self.carbSlider.setProgress(self.Content[1]/10, animated: true)
-            self.fatSlider.setProgress(self.Content[2]/10, animated: true)
-            self.proteinSlider.setProgress(self.Content[3]/10, animated: true)
-            self.calSlider.setProgress(self.Content[4]/10, animated: true)
+            self.vitaminSlider.setProgress(selecItemArray[0]/10, animated: true)
+            self.carbSlider.setProgress(selecItemArray[1]/10, animated: true)
+            self.fatSlider.setProgress(selecItemArray[2]/10, animated: true)
+            self.proteinSlider.setProgress(selecItemArray[3]/10, animated: true)
+            self.calSlider.setProgress(selecItemArray[4]/10, animated: true)
         }
     }
 }
