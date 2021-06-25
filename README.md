@@ -1,6 +1,6 @@
 # HEALTH ⚕️
 ### ARTIFICIAL INTELLIGENCE PROJECT 🚀
-* Made for CSE3013 (Artifical Intelligence) Course. 
+* Made for CSE3013 (Artifical Intelligence) Course
 
 ## Documentation 📒
 1. [Power Point Presentation](https://drive.google.com/file/d/1GYLeW807h0IrGuWJVvzWMIqwO_sdvwoM/view?usp=sharing) about the Project 
